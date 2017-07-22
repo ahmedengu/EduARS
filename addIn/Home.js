@@ -237,7 +237,7 @@ Parse.serverURL = 'https://powerp.back4app.io/';
 })(this);
 
 angular.module('App', ['parse-angular','parse-angular.enhance'])
-    .controller('Ctrl', ['$scope', function ($scope) {
+    .controller('Ctrl', ['$scope', function ($scope, $rootScope) {
         $scope.user = Parse.User.current();
         $scope.login = function () {
             if (!$scope.username || !$scope.password)
