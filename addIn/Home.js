@@ -277,8 +277,10 @@ angular.module('App', ['parse-angular','parse-angular.enhance'])
                 location.reload();
             });
         }
-        if (!$scope.user)
+        if (!$scope.user) {
+            $rootScope.isLoading = false;
             return;
+        }
         $scope.slideNum = 0;
         $scope.answers = ["", ""];
         $scope.questions = [];
