@@ -573,9 +573,11 @@ $(document).ready(function () {
     try {
         if (!Office.context.document) {
             $('#divLoading').append('<h1 class="text-center">This is a PowerPoint Addin</h1>');
+            $('.removeMe').remove();
         } 
     } catch (e) {
         $('#divLoading').append('<h1 class="text-center">This is a PowerPoint Addin</h1>');
+         $('.removeMe').remove();
     }
 });
     // Reads data from current document selection and displays a notification
