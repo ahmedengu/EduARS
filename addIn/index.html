@@ -1,11 +1,11 @@
-﻿<!DOCTYPE html>
-<html lang="en" style="height:100%;" ng-app="App" ng-controller="Ctrl">
+<!DOCTYPE html>
+<html lang="en" style="height: 100%;" ng-app="App" ng-controller="Ctrl">
 <head>
     <meta charset="utf-8">
     <title>PowerPoint</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="pinegrow, blocks, bootstrap" />
-    <meta name="description" content="My new website" />
+    <meta name="keywords" content="pinegrow, blocks, bootstrap"/>
+    <meta name="description" content="My new website"/>
     <!-- Core CSS -->
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="css/font-awesome.min.css" rel="stylesheet">
@@ -18,17 +18,17 @@
     <link href="css/custom.css" rel="stylesheet">
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
     <!--[if lt IE 9]>
-    <script src="js/html5shiv.js"></script>
-    <script src="js/respond.min.js"></script>
+        <script src="js/html5shiv.js"></script>
+        <script src="js/respond.min.js"></script>
     <![endif]-->
     <link rel="stylesheet" href="css/animate.min.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
     <script src="Scripts/jquery-1.9.1.js" type="text/javascript"></script>
     <script src="Scripts/FabricUI/MessageBanner.js" type="text/javascript"></script>
     <script src="Scripts/Office/MicrosoftAjax.js" type="text/javascript"></script>
     <script src="Scripts/Office/1/office.js" type="text/javascript"></script>
-    <link href="Home.css" rel="stylesheet" type="text/css" />
+    <link href="Home.css" rel="stylesheet" type="text/css"/>
     <!-- For the Office UI Fabric, go to https://aka.ms/office-ui-fabric to learn more. -->
     <link rel="stylesheet" href="Content/fabric.min.css">
     <link rel="stylesheet" href="Content/fabric.components.min.css">
@@ -44,7 +44,7 @@
             right: 0;
             top: 0;
         }
-        </style>
+    </style>
 </head>
 <body data-spy="scroll" data-target="nav" class="bg-deepocean">
 <div id="divLoading" class="show" ng-if="isLoading!=false"></div>
@@ -57,11 +57,11 @@
             <label class="control-label text-muted" for="exampleInputEma1il1">
                 <p>Lecture Name</p>
             </label>
-            <input type="text" class="form-control" id="exampleInputEma1il1" placeholder="Lecture Name" ng-model="lecName" >
+            <input type="text" class="form-control" id="exampleInputEma1il1" placeholder="Lecture Name" ng-model="lecName">
             <label class="control-label text-muted" for="exampljkjeInputEma1il1">
                 <p>Success Rate</p>
             </label>
-            <input type="text" class="form-control" id="exampljkjeInputEma1il1" placeholder="Success Rate" ng-model="successRate" >
+            <input type="text" class="form-control" id="exampljkjeInputEma1il1" placeholder="Success Rate" ng-model="successRate">
             <span class="btn btn-danger" ng-click="updateLec()">Update Lecture</span>
             <hr>
         </div>
@@ -74,7 +74,8 @@
             <hr>
         </div>
 
-        <h1 class="turquoise" style="--empty-placeholder: 0px" ng-show="user"><i class="fa fa-slack" style="transform: rotate(17deg)"></i>{{slideNum}}
+        <h1 class="turquoise" style="--empty-placeholder: 0px" ng-show="user">
+            <i class="fa fa-slack" style="transform: rotate(17deg)"></i>{{slideNum}}
         </h1>
         pan &nbsp; &nbsp;&nbsp;&nbsp;
         <div class="row" ng-show="user">
@@ -84,7 +85,7 @@
                         <label class="control-label text-muted" for="exampleInputEmail1">
                             <p>Question?</p>
                         </label>
-                        <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Question" ng-model="theQuestion" >
+                        <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Question" ng-model="theQuestion">
                         <hr>
                     </div>
                     <div class="form-group">
@@ -93,14 +94,18 @@
                         <div ng-repeat="answer in answers track by $index">
                             <div ng-if="$index==0">
                                 <div class="input-group">
-                                    <input type="text" class="form-control" placeholder="The correct choice"  ng-model="answers[$index]" id="formInput308">
-                                    <span placeholder="The correct choice" class="input-group-addon alert-success btn" ng-click="addChoice()"><i class="fa fa-plus-circle black"></i></span>
+                                    <input type="text" class="form-control" placeholder="The correct choice" ng-model="answers[$index]" id="formInput308">
+                                    <span placeholder="The correct choice" class="input-group-addon alert-success btn" ng-click="addChoice()">
+                                        <i class="fa fa-plus-circle black"></i>
+                                    </span>
                                 </div>
                                 <hr ng-show="answers.length>1">
                             </div>
                             <div class="input-group" ng-if="$index!=0">
-                                <span class="input-group-addon btn" ng-click="removeChoice($index)"><i class="fa fa-remove text-danger"></i></span>
-                                <input type="text" class="form-control" placeholder="Another choice" ng-model="answers[$index]" >
+                                <span class="input-group-addon btn" ng-click="removeChoice($index)">
+                                    <i class="fa fa-remove text-danger"></i>
+                                </span>
+                                <input type="text" class="form-control" placeholder="Another choice" ng-model="answers[$index]">
                             </div>
                         </div>
                     </div>
@@ -111,16 +116,20 @@
                         <hr/>
                         <h1>Questions</h1>
                         <li class="list-group-item" ng-repeat="question in questions track by $index">
-                            <span class=" pull-left" ng-click="questionAnswers($index)" data-target="#modal1" data-toggle="modal" ><span class="fa fa-th-list"></span></span>
+                            <span class=" pull-left" ng-click="questionAnswers($index)" data-target="#modal1" data-toggle="modal">
+                                <span class="fa fa-th-list"></span>
+                            </span>
                             {{question.get("question")}}
-                            <span class=" pull-right" ng-click="removeQuestion($index)"><span class="fa fa-remove text-danger"></span></span>
+                            <span class=" pull-right" ng-click="removeQuestion($index)">
+                                <span class="fa fa-remove text-danger"></span>
+                            </span>
                         </li>
                     </ul>
                 </form>
                 <!-- Carousel -->
                 <!--// End Carousel -->
-                <br>  
-                <hr />
+                <br>
+                <hr/>
                 <h1>Navigate</h1>
 
                 <div class="btn-group btn-block btn-group-justified   col-sm-4 col-sm-offset-4">
@@ -139,7 +148,7 @@
                     <h1>Welcome</h1>
                     <div class="form-group">
                         <label class="control-label" for="exampleInputEmail1">Username</label>
-                        <input type="text" class="form-control" id="exampleInput12" placeholder="Enter Username"  ng-model="username">
+                        <input type="text" class="form-control" id="exampleInput12" placeholder="Enter Username" ng-model="username">
                     </div>
                     <div class="form-group">
                         <label class="control-label" for="exampleInputPassword1">Password</label>
@@ -154,7 +163,7 @@
                 </form>
                 <!-- Carousel -->
                 <!--// End Carousel -->
-                
+
             </div>
         </div>
     </div>
@@ -170,7 +179,7 @@
     <button type="button" class="btn btn-primary btn-block" ng-click="insertText()" style="margin-top: 0px">
         Insert Text Code
     </button>
-    
+
     <hr>
     <button type="button" class="btn btn-success btn-block" ng-click="downloadStudents()" style="margin-top: 0px">
         Download Students list
@@ -189,7 +198,7 @@
 <script type="text/javascript" src="js/angular.js"></script>
 <script type="text/javascript" src="js/parse.js"></script>
 <script type="text/javascript" src="js/qrious.js"></script>
-    <script type="text/javascript" src="js/papaparse.js"></script>
+<script type="text/javascript" src="js/papaparse.js"></script>
 <script type="text/javascript" src="js/download.js"></script>
 <script type="text/javascript" src="js/lodash.js"></script>
 
@@ -203,54 +212,60 @@
                 <div class="ms-font-m ms-fontWeight-semilight" id="notification-body"></div>
             </div>
         </div>
-        <button class="ms-MessageBanner-expand" style="display: none"><i class="ms-Icon ms-Icon--chevronsDown"></i> </button>
+        <button class="ms-MessageBanner-expand" style="display: none">
+            <i class="ms-Icon ms-Icon--chevronsDown"></i>
+        </button>
         <div class="ms-MessageBanner-action"></div>
     </div>
-    <button class="ms-MessageBanner-close"> <i class="ms-Icon ms-Icon--x"></i> </button>
+    <button class="ms-MessageBanner-close">
+        <i class="ms-Icon ms-Icon--x"></i>
+    </button>
 </div>
-    <div class="modal fade pg-show-modal" id="modal1" tabindex="-1" role="dialog" aria-hidden="true" data-pg-collapsed>
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                    <h4 class="modal-title">Students Answers to: {{mQuestion.get('question')}}</h4>
+<div class="modal fade pg-show-modal" id="modal1" tabindex="-1" role="dialog" aria-hidden="true" data-pg-collapsed>
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">Students Answers to: {{mQuestion.get('question')}}</h4>
+            </div>
+            <div class="modal-body">
+                <div class="table-responsive">
+
+                    <table class="table table-hover table-bordered table-condensed" data-pg-collapsed>
+                        <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Username</th>
+                            <th>Answer</th>
+                            <th>Date</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr ng-repeat="answer in mAnswers track by $index">
+                            <td>{{$index}}</td>
+                            <td>{{answer.get('user').get('username')}}</td>
+                            <td><i class="fa" ng-class="answer.get('answer')==mQuestion.get('answers')[0]?'fa-check text-success':'fa-close text-danger'"></i> {{answer.get('answer')||'-'}}</td>
+                            <td>{{answer.updatedAt.toLocaleString()}}</td>
+                        </tr>
+
+                        </tbody>
+                    </table>
                 </div>
-                <div class="modal-body">
-                    <div class="table-responsive">
 
-                        <table class="table table-hover table-bordered table-condensed" data-pg-collapsed>
-                            <thead>
-                                <tr>
-                                    <th>#</th>
-                                    <th>Username</th>
-                                    <th>Answer</th>
-                                    <th>Date</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr ng-repeat="answer in mAnswers track by $index">
-                                    <td>{{$index}}</td>
-                                    <td>{{answer.get('user').get('username')}}</td>
-                                    <td><i class="fa" ng-class="answer.get('answer')==mQuestion.get('answers')[0]?'fa-check text-success':'fa-close text-danger'"></i> {{answer.get('answer')||'-'}}</td>
-                                    <td>{{answer.updatedAt.toLocaleString()}}</td>
-                                </tr>
-
-                            </tbody>
-                        </table>
-                    </div>
-
-                    </div>
-                <div class="modal-footer">
-                    <p class="text-left"><b>Question Answers</b></p>
-                    <ul class="list-group">
-                        <li class="list-group-item text-left" ng-repeat="choice in mQuestion.get('answers') track by $index">
-                            {{choice}}
-                            <i class="fa pull-right" ng-class="$index==0?'fa-check text-success':'fa-close text-danger'"></i>
-                        </li>
-                    </ul>
-                </div>
+            </div>
+            <div class="modal-footer">
+                <p class="text-left">
+                    <b>Question Answers</b>
+                </p>
+                <ul class="list-group">
+                    <li class="list-group-item text-left" ng-repeat="choice in mQuestion.get('answers') track by $index">
+                        {{choice}}
+                        <i class="fa pull-right" ng-class="$index==0?'fa-check text-success':'fa-close text-danger'"></i>
+                    </li>
+                </ul>
             </div>
         </div>
     </div>
+</div>
 </body>
 </html>
